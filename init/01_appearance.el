@@ -2,6 +2,11 @@
 ; customize interface
 ;----------------------------------------
 ;; hide some components
+(include-packages 'powerline
+                  'zenburn-theme
+                  'obsidian-theme
+                  'solarized-theme)
+
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
@@ -13,4 +18,10 @@
                       charset
                       (font-spec :family "Heiti SC" :size 15)))
 
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+;; (load-theme 'obsidian t)
+(load-theme 'solarized-dark t)
+
+;; eye candy
+(require 'powerline)
+(powerline-vim-theme)

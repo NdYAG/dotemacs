@@ -1,4 +1,4 @@
-(include-packages 'rainbow-mode 'scss-mode 'stylus-mode)
+(include-packages 'rainbow-mode 'scss-mode 'stylus-mode 'helm-css-scss)
 
 (add-hook 'css-mode-hook 'prog-defaults)
 (add-hook 'css-mode-hook 'rainbow-mode)
@@ -28,6 +28,9 @@
                             (add-to-list 'ac-modes 'scss-mode)
                             (auto-complete-mode 1)
                             (hs-minor-mode 1)))
+
+(require 'helm-css-scss)
+(global-set-key "s" (quote helm-css-scss))
 
 (require 'stylus-mode)
 (add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))

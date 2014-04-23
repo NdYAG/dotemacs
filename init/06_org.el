@@ -4,6 +4,8 @@
 ; and
 ; http://orgmode.org/worg/ (really great resource)
 ;----------------------------------------
+(include-packages 'htmlize)
+
 (eval-when-compile
   (require 'org)
   (require 'htmlize))

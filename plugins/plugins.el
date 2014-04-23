@@ -9,15 +9,10 @@
  'helm-swoop
  'magit
  'multiple-cursors
- 'powerline
  'smartscan
  'smartparens
  'yasnippet
  )
-
-;; eye candy
-(require 'powerline)
-(powerline-default-theme)
 
 (require 'rainbow-mode)
 
@@ -126,9 +121,9 @@
 ;;productivity
 (require 'helm-config)
 (global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (helm-mode 1)
-(require 'helm-css-scss)
-(global-set-key "s" (quote helm-css-scss))
+
 (require 'helm-swoop)
 (global-set-key (kbd "C-c w") (quote helm-swoop))
 (global-set-key (kbd "C-c r") (quote helm-swoop-back-to-last-point))

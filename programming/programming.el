@@ -1,5 +1,6 @@
 ;; Emacs has programming language modes for Lisp, Scheme, the Scheme-based DSSSL expression language, Ada, ASM, AWK, C, C++, Delphi, Fortran, Icon, IDL (CORBA), IDLWAVE, Java, Javascript, Metafont (TeX's companion for font creation), Modula2, Objective-C, Octave, Pascal, Perl, Pike, PostScript, Prolog, Python, Ruby, Simula, Tcl, and VHDL. 
 ;; From http://www.gnu.org/software/emacs/manual/html_node/emacs/Program-Modes.html
+(include-packages 'rainbow-delimiters)
 
 (require 'rainbow-delimiters)
 

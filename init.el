@@ -17,6 +17,6 @@
 	 ;; "markdown"
 	 ;; "jade"
 	 ;; "coffee"
-	 ;; "python"
+	 "python"
 	 ))
 (include "plugins/")
