@@ -1,0 +1,9 @@
+# contributor: simon
+# name: animation: ...
+# key: animation
+# --
+-webkit-animation: $1;
+-moz-animation: $1;
+-ms-animation: $1;
+-o-animation: $1;
+animation: $1;

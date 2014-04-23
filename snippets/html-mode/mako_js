@@ -1,0 +1,7 @@
+# contributor: Simon Day <simonday@foxmail.com>
+# name: block filter js
+# key: filter_js
+# --
+<%block filter="collect_js">
+$1
+</%block>

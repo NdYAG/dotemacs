@@ -1,0 +1,4 @@
+#contributor : Anton <anton.johansson@gmail.com>
+#name : font-family: ...
+# --
+font-family: ${1:Helvetica, Arial, sans-serif};

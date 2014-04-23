@@ -1,0 +1,5 @@
+# contributor: Simon Day <simonday@foxmail.com>
+# name: page
+# key: page
+# --
+<%page args="$1" />

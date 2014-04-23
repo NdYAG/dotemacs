@@ -1,0 +1,13 @@
+# contributor: Simon Day <simonday@foxmail.com>
+# name: <!DOCTYPE html><html>...</html>
+# key: new
+# --
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>$1</title>
+  </head>
+  <body>
+    $2
+  </body>
+</html>

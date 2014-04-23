@@ -1,0 +1,5 @@
+# contributor: Simon Day <simonday@foxmail.com>
+# name: include
+# key: include
+# --
+<%include file="$1" args="$2" />

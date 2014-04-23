@@ -1,0 +1,7 @@
+# contributor: Simon Day <simonday@foxmail.com>
+# name: mako_if
+# key: if
+# --
+% if $1:
+  $2
+% endif

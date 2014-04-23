@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: new
+# key: new
+# --
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# $1
