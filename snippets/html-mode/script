@@ -1,0 +1,5 @@
+# contributor: Simon Day <simonday@foxmail.com>
+# name: script
+# key: script
+# --
+<script src="$0"></script>

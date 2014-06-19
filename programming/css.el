@@ -27,7 +27,8 @@
 (add-hook 'scss-mode-hook (lambda()
                             (add-to-list 'ac-modes 'scss-mode)
                             (auto-complete-mode 1)
-                            (hs-minor-mode 1)))
+                            (hs-minor-mode 1)
+                            (local-set-key [C-tab] (quote hs-toggle-hiding))))
 
 (require 'helm-css-scss)
 (global-set-key "s" (quote helm-css-scss))

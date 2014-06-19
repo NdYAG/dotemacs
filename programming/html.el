@@ -12,10 +12,15 @@
 (add-to-list 'auto-mode-alist
 '("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode))
 
+;; (defun open-with-mako()
+;;   (when (string-match "/ssh" buffer-file-name)
+;;     (web-mode-set-engine "mako")))
 (defun open-with-mako()
-  (when (string-match "/ssh" buffer-file-name)
-    (web-mode-set-engine "mako")))
+    (web-mode-set-engine "mako"))
 (add-hook 'web-mode-hook 'open-with-mako)
+(add-hook 'web-mode-hook
+          (lambda() (local-set-key [C-tab] (quote web-mode-fold-or-unfold))))
+
 ;; (defun font-lock-setup ()
   ;; (when (equal major-mode 'web-mode) (setq font-lock-mode nil)))
 ;; (add-hook 'font-lock-mode-hook 'font-lock-setup)

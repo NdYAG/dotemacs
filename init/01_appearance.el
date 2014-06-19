@@ -20,7 +20,9 @@
 
 ;; (load-theme 'zenburn t)
 ;; (load-theme 'obsidian t)
-(load-theme 'solarized-dark t)
+;; (load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
+;; (load-theme 'sanityinc-tomorrow-eighties t)
 
 ;; eye candy
 (require 'powerline)

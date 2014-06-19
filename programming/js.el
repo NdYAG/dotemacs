@@ -1,11 +1,13 @@
-(include-packages 'js3-mode)
+(include-packages 'js3-mode
+                  'tern
+                  'tern-auto-complete
+                  )
 
 ;; code block toggle
 ;; (add-hook 'js-mode-hook
 ;;           (lambda ()
 ;;             (imenu-add-menubar-index)
 ;;             (hs-minor-mode t)))
-;; (global-set-key [C-tab] (quote hs-toggle-hiding))
 (add-hook 'js3-mode-hook
           (lambda ()
             ;; (setq
@@ -16,16 +18,24 @@
             (add-to-list 'ac-modes 'js3-mode)
             (auto-complete-mode t)
             (setq js3-consistent-level-indent-inner-bracket t)
-            (hs-minor-mode t)))
-(global-set-key [C-tab] (quote hs-toggle-hiding))
+            (hs-minor-mode t)
+            (local-set-key [C-tab] (quote hs-toggle-hiding))))
 
 ;; tern
-;; (autoload 'tern-mode "tern.el" nil t)
-;; (add-hook 'js-mode-hook (lambda () (tern-mode t)))
-;; (eval-after-load 'tern
-;;    '(progn
-;;       (require 'tern-auto-complete)
-;;       (tern-ac-setup)))
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(autoload 'tern-mode "tern.el" nil t)
+(add-to-list 'exec-path "/usr/local/bin")
+(setq tern-command (cons (executable-find "tern") '()))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+
+(defun boot-tern()
+  (unless (string-match "/ssh" buffer-file-name)
+    (tern-mode t)))
+(add-hook 'js-mode-hook 'boot-tern)
+(add-hook 'js3-mode-hook 'boot-tern)
 
 ;; syntax check
 ;; (require 'flymake-easy)

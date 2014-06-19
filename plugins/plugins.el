@@ -7,8 +7,10 @@
  'helm
  'helm-css-scss
  'helm-swoop
+ 'helm-projectile
  'magit
  'multiple-cursors
+ 'projectile
  'smartscan
  'smartparens
  'yasnippet
@@ -133,3 +135,8 @@
 
 (require 'smartparens-config)
 (show-smartparens-global-mode +1)
+
+(require 'projectile)
+(require 'helm-projectile)
+(projectile-global-mode)
+(global-set-key (kbd "C-c h") 'helm-projectile)

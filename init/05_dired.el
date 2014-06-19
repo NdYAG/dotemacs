@@ -9,7 +9,7 @@
   (interactive)
   (make-local-variable  'dired-sort-map)
   (setq dired-sort-map (make-sparse-keymap))
-  (setq header-line-format "Sort by: Time(lt), Size(lk), Extension(lx), Name(ls)")
+  (setq header-line-format "Sort by: Time(lt), Size(lk), Extension(lx), Name(ls). C-x C-q: edit dired.")
   (define-key dired-mode-map "l" dired-sort-map)
   (define-key dired-sort-map "k"
     '(lambda () "sort by Size"

@@ -24,7 +24,7 @@
 (global-set-key (kbd "S-C-<up>") '(lambda () (interactive) (enlarge-window 4)))
 
 
-(global-set-key (kbd "C-<tab>") 'hs-toggle-hiding)
+;; (global-set-key (kbd "C-<tab>") 'hs-toggle-hiding)
 (global-set-key "t" (quote insert-date))
 
 ;; M-( like keybinding

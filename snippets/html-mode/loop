@@ -1,0 +1,7 @@
+# contributor: Simon Day <simonday@foxmail.com>
+# name: mako_for
+# key: loop
+# --
+% for $1:
+  $2
+% endfor

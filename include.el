@@ -36,23 +36,24 @@ if second argument is given, only files in the `files` list will be loaded"
 	(include-load (concat dir (file-name-sans-extension file)))))))
 
 ;;;###autoload
-(defun include-packages (&rest packages)
+(defun include-packages (&rest packages &key then)
    "automatically check required packages, and install the missed"
    (message "%s" "Checking packages...")
    (setq missed (remove-if 'package-installed-p packages))
-   (message
-    "%s"
-    (format "Packages %s missed."
-	    (mapconcat (lambda (p) (format "%s" p)) missed ",")))
 
    (when (> (length missed) 0)
+     (message
+      "%s"
+      (format "Packages %s missed."
+              (mapconcat (lambda (p) (format "%s" p)) missed ",")))
      (package-refresh-contents)
      (mapcar
       (lambda(p)
 	(message "Installing package %s" p)
 	(package-install p))
       missed)
-     (package-initialize)))
+     (package-initialize))
+   (when then (funcall then)))
 
 ;; deprecated
 ;;;###autoload

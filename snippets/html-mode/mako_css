@@ -1,6 +1,6 @@
 # contributor: Simon Day <simonday@foxmail.com>
 # name: block filter css
-# key: filter_css
+# key: mako_css
 # --
 <%block filter="collect_css">
 $1
